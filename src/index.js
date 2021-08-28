@@ -2,11 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import TodoListPage from './TodoListPage';
 import reportWebVitals from './reportWebVitals';
+import TimerComponent from './TimerComponent';
+import LoginPage from './LoginPage';
+import {ThemeProvider} from './contexts/ThemeContext';
+import Header from './Header';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider>
+      <Header />
+      <TodoListPage />
+      {/* <TimerComponent />
+      <LoginPage /> */}
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
